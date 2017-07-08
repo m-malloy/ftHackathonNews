@@ -25,7 +25,7 @@ contract News {
         content.price = price;
     }
         
-    function getPrice(bytes fingerprint) returns(uint _price){
+    function getPrice(bytes fingerprint) public constant returns(uint _price){
         Content content = contents[fingerprint];
         return (content.price);
     }
