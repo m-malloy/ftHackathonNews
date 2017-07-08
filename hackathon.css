@@ -1,0 +1,111 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+    .center {
+    text-align: center;
+    padding-top: 80px;
+        
+}
+        p, h1, h2, h3, h4, h5 {
+            color: black;
+        }
+
+        #tooltip1 {
+            position: absolute;
+        }
+
+        #tooltip1 a span {
+            display: none;
+            color: #FFFFFF;
+        }
+#inner {
+  width: 95%;
+  margin: 0 auto;
+}
+        
+        #rcorners2 {
+    border-radius: 25px;
+    border: 4px solid #F6412C;
+    width: 100%;
+    height: 50%;    
+}
+        #tooltip1 a:hover span {
+            display: block;
+            position: absolute;
+            width: 80px;
+            background: #7184C1;
+            height: 40px;
+            right: -20px;
+            top: -10px;
+            color: #FFFFFF;
+            padding: 0 0px;
+        }
+
+        #tooltip2 {
+            position: relative;
+        }
+
+        #tooltip2 a span {
+            display: none;
+            color: #FFFFFF;
+        }
+
+        #tooltip2 a:hover span {
+            display: block;
+            position: absolute;
+            width: 60px;
+            background: #7184C1;
+            height: 20px;
+            right: 0px;
+            top: 0px;
+            color: #FFFFFF;
+            padding: 0 0px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #95a3d0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #FFFFFF;
+            display: block;
+            transition: 0.3s
+        }
+
+        .sidenav a:hover, .offcanvas a:focus {
+            color: #FFFFFF;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 1;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #bd {
+            transition: margin-right .5s;
+            padding: 0px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
