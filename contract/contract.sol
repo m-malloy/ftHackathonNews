@@ -1,19 +1,18 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.4;
 contract News {
 
     struct Content {
         address owner;
         uint price;
-        //uint256 fingerprint;
     }
     
     struct Order {
         address buyer;
-        //uint256 fingerprint;
     }
     
-    Content[] contents;
-    Order[] orders;
+    mapping(uint => Content) contents;
+    mapping(uint => Order) orders;
+    //Order[] orders;
     
     address contractMaker;
     
@@ -22,28 +21,37 @@ contract News {
     }
     
     function add(uint256 fingerprint, uint price) {
-        contents[fingerprint].owner = msg.sender;
-        contents[fingerprint].price = price;
+        Content content = contents[fingerprint];
+        content.owner = msg.sender;
+        content.price = price;
+    }
+        
+    function getPrice(uint256 fingerprint) returns(uint _price){
+        Content content = contents[fingerprint];
+        return (content.price);
     }
     
     function buy(uint256 fingerprint) payable {
-        if (msg.value < contents[fingerprint].price) {
+        Content content = contents[fingerprint];
+        Order order = orders[fingerprint];
+        if (msg.value < content.price) {
           revert();
         } else {
-            orders[fingerprint].buyer = msg.sender;
-            //send money to owner ???
-            contents[fingerprint].owner.transfer(msg.value);
+            order.buyer = msg.sender;
+            content.owner.transfer(msg.value);
         }   
     }
     
     function proveBuy(uint256 fingerprint) public constant returns (bool){
-        if(orders[fingerprint].buyer == msg.sender){
+        Order order = orders[fingerprint];
+        if(order.buyer == msg.sender){
             return true;
         }
     }
     
-    function proveSell(uint256 fingerprint) public constant returns (bool){
-        if(orders[fingerprint].buyer == msg.sender){
+    function proveOwnership(uint256 fingerprint) public constant returns (bool){
+        Content content = contents[fingerprint];
+        if(content.owner == msg.sender){
             return true;
         }
     }
