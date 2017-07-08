@@ -10,28 +10,27 @@ contract News {
         address buyer;
     }
     
-    mapping(uint => Content) contents;
-    mapping(uint => Order) orders;
-    //Order[] orders;
-    
+    mapping(bytes => Content) contents;
+    mapping(bytes => Order) orders;
+
     address contractMaker;
     
     function News() {
         contractMaker = msg.sender;
     }
     
-    function add(uint256 fingerprint, uint price) {
+    function add(bytes fingerprint, uint price) {
         Content content = contents[fingerprint];
         content.owner = msg.sender;
         content.price = price;
     }
         
-    function getPrice(uint256 fingerprint) returns(uint _price){
+    function getPrice(bytes fingerprint) returns(uint _price){
         Content content = contents[fingerprint];
         return (content.price);
     }
     
-    function buy(uint256 fingerprint) payable {
+    function buy(bytes fingerprint) payable {
         Content content = contents[fingerprint];
         Order order = orders[fingerprint];
         if (msg.value < content.price) {
@@ -42,14 +41,14 @@ contract News {
         }   
     }
     
-    function proveBuy(uint256 fingerprint) public constant returns (bool){
+    function proveBuy(bytes fingerprint) public constant returns (bool){
         Order order = orders[fingerprint];
         if(order.buyer == msg.sender){
             return true;
         }
     }
     
-    function proveOwnership(uint256 fingerprint) public constant returns (bool){
+    function proveOwnership(bytes fingerprint) public constant returns (bool){
         Content content = contents[fingerprint];
         if(content.owner == msg.sender){
             return true;
