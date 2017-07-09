@@ -60,6 +60,7 @@
         updateTokenBalance()
         bindCheckPrice()
         bindBuyButton()
+        bindProveOwnershipButton()
       }
 
       // calls eth.getBalance (gets balance in weis - "micro" ethers)
@@ -155,6 +156,15 @@
         })
       }
 
+      var prove = async function(){
+        var contentHashElem = d.querySelector(".buy_content_hash")
+        var contentHash = contentHashElem.value;
+        var proveOwnership = Promise.promisify(g.newsContract.proveOwnership);
+        g.newsContract.proveOwnership(g.web3.toHex(contentHash), function(_, value){ 
+          console.log(value);
+        })
+      }
+
       var bindAddContent = function() {
         var sendTokensBtn = d.querySelector(".drag_and_drop")
         if(sendTokensBtn){
@@ -173,6 +183,13 @@
         var buyBtn = d.querySelector(".buy-button");
         if(buyBtn){
           buyBtn.addEventListener("click", buyContent);
+        }
+      }
+
+      var bindProveOwnershipButton = function() {
+        var proveBtn = d.querySelector(".prove-ownership-button");
+        if(proveBtn){
+          proveBtn.addEventListener("click", prove);
         }
       }
 
