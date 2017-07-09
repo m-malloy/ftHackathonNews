@@ -72,8 +72,8 @@ main {
 /* dynamic buttons, changing behaviour on mouse hover and mouse click */
 .buy-button {
     display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
+    padding: 5px 10px;
+    font-size: 14px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -120,3 +120,22 @@ main {
     border: 1px solid #ccc;
 }
 
+
+.authorTagsContainer{
+    width: 100%;
+}
+
+.authorContainer, .tagsContainer{
+    width: 50%;
+}
+
+.tags
+{
+    font-size: 6px;
+}
+
+.titles
+{
+    font-size: 12px;
+    
+}

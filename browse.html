@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="bootstrap.min.css" rel="stylesheet">
     <!-- myCSS -->
+       <link rel="stylesheet" type="text/css" href="strategy.css">
     <link rel="stylesheet" type="text/css" href="login.css">
     <link rel="stylesheet" type="text/css" href="hackathon.css">
     <style media="screen">
@@ -19,7 +20,7 @@
     
     <div class="topBar" id="topBar" style="background-color: #F6412C;">
     <ul>
-        <li><a href="upload-media.html"><img src="images/logo.png" alt="Logo" width="104px" height="52px" align="middle" vspace="0" hspace="15"/></a>
+        <li><a href="browse.html"><img src="images/logo.png" alt="Logo" width="104px" height="52px" align="middle" vspace="0" hspace="15"/></a>
         <li>
             <button class="x" id="rcorners1" onclick="window.location.href='browse.html'" style="background-color: #f86454;">Browse
             </button>
@@ -64,33 +65,102 @@
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
       <div src="images/logo.png" alt="Norway" style="height:0;width:100%;padding-bottom:100%" class="w3-hover-opacity">
-          <img src="images/img1.jpg" alt="Logo"  align="middle" width="100%"/>
+          <a><img src="images/img1.jpg" alt="Logo"  align="middle" width="100%"/></a>
       </div>
       <div class="w3-container w3-white">
         <p><b>Dog thieves</b></p>
         <p>
 Dogs caught stealing human clothing then wearing it.</p>
+          <button class="buy-button" onclick="buttonBuyStock()" style="color: #ffffff;">SCOOP 140©</button>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <div data-role="page" id="pageone">
+         <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+               <div class="ui-block-a">
+                   
+                   <h4 class="titles" >Author</h4>
+                <p style="font-size: 10px;">Peter Parker</p>   
+                   
+               </div>
+               <div class="ui-block-b">
+                   <h4 class="titles">Tags</h4>
+                <p class="tags">- News - Something - Emergency - Fire</p> 
+               </div>
+            </div>
+         </div>
+      </div>
+          
       </div>
     </div>
+      
+      
     <div class="w3-third w3-container w3-margin-bottom">
       <div src="/w3images/mountains.jpg" alt="Norway" style="height:0;width:100%;padding-bottom:100%" class="w3-hover-opacity">
-          <img src="images/img2.jpg" alt="Logo"  align="middle" width="100%"/>
+          <a href="buy.html"><img src="images/img2.jpg" alt="Logo"  align="middle" width="100%"/></a>
       </div>      <div class="w3-container w3-white">
         <p><b>Racetrack fire</b></p>
         <p>Footage of a last minute escape by a driver before his car caught fire.</p>
-        <p>340 SCOOP</p>
-        <a href="buy.html">BUY</a>  
+        <button class="buy-button"  onclick="window.location.href='buy.html'" style="color: #ffffff;">SCOOP 123©</button>
+        
+        <div data-role="page" id="pageone">
+         <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+               <div class="ui-block-a">
+                   
+                   <h4 class="titles" >Author</h4>
+                <p style="font-size: 10px;">Peter Parker</p>   
+                   
+               </div>
+               <div class="ui-block-b">
+                   <h4 class="titles">Tags</h4>
+                <p class="tags">- News - Something - Emergency - Fire</p> 
+               </div>
+            </div>
+         </div>
+      </div>
       </div>
     </div>
+      
+      
     <div class="w3-third w3-container">
       <div src="/w3images/mountains.jpg" alt="Norway" style="height:0;width:100%;padding-bottom:100%" class="w3-hover-opacity">
-          <img src="images/img3.jpg" alt="Logo"  align="middle" width="100%"/>
+          <a><img src="images/img3.jpg" alt="Logo"  align="middle" width="100%"/></a>
       </div>
       <div class="w3-container w3-white">
         <p><b>Lightning storm</b></p>
         <p>Freak storm caught in raw smartphone footage.</p>
-        <p>100 SCOOP</p>
-        <a href="buy.html">BUY</a>
+          <button class="buy-button" onclick="buttonBuyStock()" style="color: #ffffff;">SCOOP 140©</button>
+        
+        <div data-role="page" id="pageone">
+         <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+               <div class="ui-block-a">
+                   
+                   <h4 class="titles" >Author</h4>
+                <p style="font-size: 10px;">Peter Parker</p>   
+                   
+               </div>
+               <div class="ui-block-b">
+                   <h4 class="titles">Tags</h4>
+                <p class="tags">- News - Something - Emergency - Fire</p> 
+               </div>
+            </div>
+         </div>
+      </div>
+        
       </div>
     </div>
   </div>
@@ -103,35 +173,84 @@ Dogs caught stealing human clothing then wearing it.</p>
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
       <div src="/w3images/mountains.jpg" alt="Norway" style="height:0;width:100%;padding-bottom:100%" class="w3-hover-opacity">
-          <img src="images/img4.jpg" alt="Logo"  align="middle" width="100%"/>
+          <a><img src="images/img4.jpg" alt="Logo"  align="middle" width="100%"/></a>
       </div>
       <div class="w3-container w3-white">
         <p><b>Cat stuck in tree</b></p>
-        <p>340 SCOOP</p>
-        <a href="buy.html">BUY</a>
         <p>
 Local cat pictured stuck in tree awaiting rescue.</p>
+          <button class="buy-button" onclick="buttonBuyStock()" style="color: #ffffff;">SCOOP 140©</button>
+        
+        <div data-role="page" id="pageone">
+         <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+               <div class="ui-block-a">
+                   
+                   <h4 class="titles" >Author</h4>
+                <p style="font-size: 10px;">Peter Parker</p>   
+                   
+               </div>
+               <div class="ui-block-b">
+                   <h4 class="titles">Tags</h4>
+                <p class="tags">- News - Something - Emergency - Fire</p> 
+               </div>
+            </div>
+         </div>
+      </div>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
       <div src="/w3images/mountains.jpg" alt="Norway" style="height:0;width:100%;padding-bottom:100%" class="w3-hover-opacity">
-          <img src="images/img5.jpg" alt="Logo"  align="middle" width="100%"/>
+          <a><img src="images/img5.jpg" alt="Logo"  align="middle" width="100%"/></a>
       </div>      <div class="w3-container w3-white">
         <p><b>Unconscious developer</b></p>
         <p>Developer pictured here after falling into a pizza coma.</p>
-        <p>340 SCOOP</p>
-        <a href="buy.html">BUY</a>
+          <button class="buy-button" onclick="buttonBuyStock()" style="color: #ffffff;">SCOOP 140©</button>
+        
+        <div data-role="page" id="pageone">
+         <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+               <div class="ui-block-a">
+                   
+                   <h4 class="titles" >Author</h4>
+                <p style="font-size: 10px;">Peter Parker</p>   
+                   
+               </div>
+               <div class="ui-block-b">
+                   <h4 class="titles">Tags</h4>
+                <p class="tags">- News - Something - Emergency - Fire</p> 
+               </div>
+            </div>
+         </div>
+      </div>
+        
       </div>
     </div>
     <div class="w3-third w3-container">
       <div src="/w3images/mountains.jpg" alt="Norway" style="height:0;width:100%;padding-bottom:100%" class="w3-hover-opacity">
-          <img src="images/img6.jpg" alt="Logo"  align="middle" width="100%"/>
+          <a><img src="images/img6.jpg" alt="Logo"  align="middle" width="100%"/></a>
       </div>
       <div class="w3-container w3-white">
         <p><b>Blockchain Hackathon</b></p>
-        <p>Ambitious developers pictured here solving worlds problems so long as they consume enough caffeine.</p>
-        <p>340 SCOOP</p>
-        <a href="buy.html">BUY</a>
+        <p>Ambitious developers pictured solving problems so long as they consume caffeine.</p>
+          <button class="buy-button" onclick="buttonBuyStock()" style="color: #ffffff;">SCOOP 140©</button>
+        
+        <div data-role="page" id="pageone">
+         <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+               <div class="ui-block-a">
+                   
+                   <h4 class="titles" >Author</h4>
+                <p style="font-size: 10px;">Peter Parker</p>   
+                   
+               </div>
+               <div class="ui-block-b">
+                   <h4 class="titles">Tags</h4>
+                <p class="tags">- News - Something - Emergency - Fire</p> 
+               </div>
+            </div>
+         </div>
+      </div>
       </div>
     </div>
   </div>
