@@ -1,0 +1,122 @@
+/*
+ *Stylesheet for the strategy generation and modifications page
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Sans-Serif;
+}
+
+/* main content of the page */
+main {
+    padding-bottom: 10010px;
+    margin-bottom: -10000px;
+    float: left;
+    width: 100%;
+}
+
+.inline {
+    display: inline;
+    clear: none;
+}
+
+/* right section of the page (filters + current choice) */
+#nav {
+    float: left;
+    width: 300px;
+    margin-left: -300px;
+    padding-bottom: 10010px;
+    margin-bottom: -10000px;
+    background: #eee;
+}
+
+.innertube {
+    margin: 15px; /* Padding the right menu for content */
+    margin-top: 0;
+}
+
+/* styling for the current choice*/
+.choice {
+    color: red;
+    font-size: 30px;
+}
+
+/* keeps heading and paragraph on the same line for physical and technical risks */
+.nowrap p, .nowrap h4, .nowrap h6 {
+    display: inline;
+    vertical-align: top;
+}
+
+#wrapper {
+    overflow: hidden;
+}
+
+#content {
+    margin-right: 230px; /* Same as 'nav' width */
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+/* Used to keep the £ sign in front of value in input text field when range slider moves */
+.currency-input {
+    border: 1px inset #ccc;
+}
+
+.currency-input input {
+    border: 0;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+/* dynamic buttons, changing behaviour on mouse hover and mouse click */
+.buy-button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #FFFFFF;
+!important;
+    background-color: #F83F1F;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.buy-button:hover {
+    background: #FB7968;
+}
+
+.buy-button:active {
+    background-color: #F83F1F;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+/* drop down meny styling */
+
+.styled-select select {
+    background: transparent;
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
+    -webkit-appearance: none;
+}
+
+.styled-select {
+    width: 240px;
+    height: 34px;
+    overflow: hidden;
+    background: url(../images/down_arrow_select.jpg) no-repeat right #ddd;
+    border: 1px solid #ccc;
+}
+
