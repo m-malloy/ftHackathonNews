@@ -6,3 +6,8 @@ Navigate to localhost:3001/upload-media.html
 
 The contract can be found in the /contract folder
 All calls to the cotracts are in blockchain.js 
+
+ICO Whitepaper - 
+
+
+
