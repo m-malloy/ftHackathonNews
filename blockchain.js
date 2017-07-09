@@ -160,8 +160,12 @@
         var contentHashElem = d.querySelector(".buy_content_hash")
         var contentHash = contentHashElem.value;
         var proveOwnership = Promise.promisify(g.newsContract.proveOwnership);
-        g.newsContract.proveOwnership(g.web3.toHex(contentHash), function(_, value){ 
-          console.log(value);
+        g.newsContract.proveOwnership(g.web3.toHex(contentHash), function(_, value){
+          if(value){
+            document.getElementById("proveOwnershipDiv").innerHTML = "You have the right to use this contnet!";
+          }else{
+            document.getElementById("proveOwnershipDiv").innerHTML = "You DO NOT have the right to use this contnet!";
+          }
         })
       }
 
