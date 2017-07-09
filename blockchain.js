@@ -59,6 +59,7 @@
         updateBalance()
         updateTokenBalance()
         bindCheckPrice()
+        bindBuyButton()
       }
 
       // calls eth.getBalance (gets balance in weis - "micro" ethers)
@@ -145,14 +146,34 @@
         })
       }
 
+      var buyContent = async function(){
+        var contentHashElem = d.querySelector(".buy_content_hash")
+        var contentHash = contentHashElem.value;
+        var buy = Promise.promisify(g.newsContract.buy);
+        g.newsContract.buy(g.web3.toHex(contentHash), {value: 123}, function(_, value){ 
+          console.log(value);
+        })
+      }
+
       var bindAddContent = function() {
         var sendTokensBtn = d.querySelector(".drag_and_drop")
-        sendTokensBtn.addEventListener("click", addContent)
+        if(sendTokensBtn){
+          sendTokensBtn.addEventListener("click", addContent)
+        }
       }
 
       var bindCheckPrice = function() {
-          var checkPriceBtn = d.querySelector(".check_price_btn")
+        var checkPriceBtn = d.querySelector(".check_price_btn")
+        if(checkPriceBtn){
           checkPriceBtn.addEventListener("click", checkPrice)
+        }
+      }
+
+      var bindBuyButton = function() {
+        var buyBtn = d.querySelector(".buy-button");
+        if(buyBtn){
+          buyBtn.addEventListener("click", buyContent);
+        }
       }
 
       window.addEventListener('load', main)
