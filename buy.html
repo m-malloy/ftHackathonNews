@@ -12,7 +12,6 @@
       <!-- myCSS -->
        <link rel="stylesheet" type="text/css" href="strategy.css">
       <link rel="stylesheet" type="text/css" href="login.css">
-      <link rel="stylesheet" type="text/css" href="style/sticky-footer.css">
       <link rel="stylesheet" type="text/css" href="hackathon.css">
       <style media="screen">
          p > span { font-weight: bold; }
@@ -21,7 +20,7 @@
    <body>
       <div class="topBar" id="topBar" style="background-color: #F6412C;">
          <ul>
-            <li><a href="index.html"><img src="images/logo.png" alt="Logo" width="104px" height="52px" align="middle" vspace="0" hspace="15"/></a>
+            <li><a href="browse.html"><img src="images/logo.png" alt="Logo" width="104px" height="52px" align="middle" vspace="0" hspace="15"/></a>
             <li>
                <button class="x" id="rcorners1" onclick="window.location.href='browse.html'" style="background-color: #f86454;">Browse
                </button>
@@ -74,9 +73,10 @@
                        <h1>Tags</h1>
                        <h3>- spiders - webs - emergency - hero - fire</h3>
                        <h1>Price</h1>
-                       <h3>Scoops 123,45©</h3>
-                       <br>
-                  <button class="buy-button" onclick="buttonBuyStock()" style="color: #ffffff;"><a>Buy</a></button>
+                       <h3>Scoops 123©</h3>
+                         Image hash: 6b4e03423667dbb73b6e15454f0eb1abd4597f9a1b078e3f5b5a6bc7
+                       <br>Unique hash of the uploaded content: <input type="text"  class="input buy_content_hash" name="" value="" placeholder="" style="width: 300px;"><br/>
+                      <button class="buy-button" style="color: #ffffff;"><a>Buy</a></button>
                        </div>
                </div>
             </div>
@@ -89,6 +89,7 @@
             <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
          </div>
       </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.0/bluebird.min.js" charset="utf-8"></script>
       <script src="./blockchain.js"></script>
     </body>
 </html>
